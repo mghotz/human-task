@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head><base href="../../../">
+		<meta charset="utf-8" />
+		<title>Record Selection</title>
+		<meta name="description" content="Single and group record selection" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="canonical" href="https://keenthemes.com/metronic" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<link href="{% static 'css/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/prismjs.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+	</head>
+	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed page-loading">
+		<div class="d-flex flex-column flex-root">
+			<div class="d-flex flex-row flex-column-fluid page">
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+						<div class="d-flex flex-column-fluid">
+							<div class="container">
+								<div class="card card-custom">
+									<div class="card-body">
+										<div class="mt-10 mb-5 collapse" id="kt_datatable_group_action_form_2">
+											<div class="d-flex align-items-center">
+												<div class="font-weight-bold text-danger mr-3">Selected
+												<span id="kt_datatable_selected_records_2">0</span>records:</div>
+												<button class="btn btn-sm btn-success" type="button" data-toggle="modal" id="kt_datatable_fetch_modal">Compare</button>
+											</div>
+										</div>
+										<div class="datatable datatable-bordered datatable-head-custom" id="kt_datatable_2"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>var HOST_URL = "http://localhost:8000";</script>
+		<script src="{% static 'js/plugins.bundle.js' %}"></script>
+		<script src="{% static 'js/prismjs.bundle.js' %}"></script>
+		<script src="{% static 'js/scripts.bundle.js' %}"></script>
+		{% include 'data/data_loader.html' %}">
+	</body>
+</html>

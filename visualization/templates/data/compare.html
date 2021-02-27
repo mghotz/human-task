@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head><base href="../../../">
+		<meta charset="utf-8" />
+		<title>Record Selection</title>
+		<meta name="description" content="Single and group record selection" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="canonical" href="https://keenthemes.com/metronic" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<link href="{% static 'css/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/prismjs.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+	</head>
+	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed page-loading">
+		<div class="d-flex flex-column flex-root">
+			<div class="d-flex flex-row flex-column-fluid page">
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+						<div class="d-flex flex-column-fluid">
+							<div class="container">
+								<div class="card">
+									<div class="d-block d-lg-none rounded-card-top bg-danger position-absolute w-100 h-25"></div>
+									<div class="card-body position-relative p-0 rounded-card-top">
+										<div class="row justify-content-center mx-0 mb-15 d-none d-lg-flex">
+                                            {% if total != 2 %}
+                                                please select 2 valid rows to compare
+                                            {% else %}
+                                                <div class="col-11">
+                                                <div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Full Name</div>
+													<div class="col-4">{{ data.0.first_name }} {{ data.0.last_name }}</div>
+													<div class="col-4">{{ data.1.first_name }} {{ data.1.last_name }}</div>
+												</div>
+												<div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Age</div>
+													<div class="col-4">{{ data.0.age }}</div>
+													<div class="col-4">{{ data.1.age }}</div>
+												</div>
+												<div class="row bg-white py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Birth Date</div>
+													<div class="col-4">{{ data.0.birth_date }}</div>
+													<div class="col-4">{{ data.1.birth_date }}</div>
+												</div>
+												<div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Contract Type</div>
+													<div class="col-4">{{ data.0.contract_type }}</div>
+													<div class="col-4">{{ data.1.contract_type }}</div>
+												</div>
+												<div class="row bg-white py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Email Address</div>
+													<div class="col-4">{{ data.0.email }}</div>
+													<div class="col-4">{{ data.1.email }}</div>
+												</div>
+												<div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Employment Status</div>
+													<div class="col-4">{{ data.0.status }}</div>
+													<div class="col-4">{{ data.1.status }}</div>
+												</div>
+												<div class="row bg-white py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Employment Type</div>
+													<div class="col-4">{{ data.0.type }}</div>
+													<div class="col-4">{{ data.1.type }}</div>
+												</div>
+												<div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Ethnicity</div>
+													<div class="col-4">{{ data.0.ethnicity }}</div>
+													<div class="col-4">{{ data.1.ethnicity }}</div>
+												</div>
+                                                <div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Gender</div>
+													<div class="col-4">{{ data.0.gender }}</div>
+													<div class="col-4">{{ data.1.gender }}</div>
+												</div>
+                                                <div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Job Name</div>
+													<div class="col-4">{{ data.0.position }}</div>
+													<div class="col-4">{{ data.1.position }}</div>
+												</div>
+                                                <div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Risk of Exit</div>
+													<div class="col-4">{{ data.0.risk }}%</div>
+													<div class="col-4">{{ data.1.risk }}%</div>
+												</div>
+                                                <div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Compa Ratio</div>
+													<div class="col-4">{{ data.0.compa }}%</div>
+													<div class="col-4">{{ data.1.compa }}%</div>
+												</div><div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Tenure</div>
+													<div class="col-4">{{ data.0.tenure }} months</div>
+													<div class="col-4">{{ data.1.tenure }} months</div>
+												</div><div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Start Date</div>
+													<div class="col-4">{{ data.0.start_date }}</div>
+													<div class="col-4">{{ data.1.start_date }}</div>
+												</div><div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Scheduled Hours</div>
+													<div class="col-4">{{ data.0.hours }}</div>
+													<div class="col-4">{{ data.1.hours }}</div>
+												</div>
+                                                <div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Potential</div>
+													<div class="col-4">{{ data.0.potenial }}</div>
+													<div class="col-4">{{ data.1.potenial }}</div>
+												</div>
+                                                <div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Performance rating</div>
+													<div class="col-4">{{ data.0.performance }}</div>
+													<div class="col-4">{{ data.1.performance }}</div>
+												</div>
+                                                <div class="row bg-gray-100 py-5 font-weight-bold text-center">
+													<div class="col-4 text-left px-5 font-weight-boldest">Overtime status</div>
+													<div class="col-4">{{ data.0.overtime }}</div>
+													<div class="col-4">{{ data.1.overtime }}</div>
+												</div>
+											</div>
+                                            {% endif %}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>var HOST_URL = "http://localhost:8000";</script>
+		<script src="{% static 'js/plugins.bundle.js' %}"></script>
+		<script src="{% static 'js/prismjs.bundle.js' %}"></script>
+		<script src="{% static 'js/scripts.bundle.js' %}"></script>
+		{% include 'data/data_loader.html' %}">
+	</body>
+</html>
