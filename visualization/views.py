@@ -64,7 +64,7 @@ class ComparePersonDataView(views.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        url = F"http://localhost:8000/api/compare/{self.kwargs['ids']}/"
+        url = F"https://human-task.herokuapp.com//api/compare/{self.kwargs['ids']}/"
         data = requests.get(url=url)
         context['total'] = len(data.json())
         context['data'] = data.json()
