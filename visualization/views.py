@@ -5,7 +5,6 @@ from visualization import models
 from django.http import JsonResponse
 from django.contrib.auth import views
 import requests
-from django.urls import reverse_lazy
 # Create your views here.
 
 # upload persons from CSV file
@@ -47,6 +46,10 @@ class PersonsUploadView(View):
 
         try:
             models.Person.objects.all().delete()
+        except:
+            print('no data')
+
+        try:
             msg = models.Person.objects.bulk_create(objs)
             returnmsg = {"status_code": 200}
 
