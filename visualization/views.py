@@ -47,7 +47,7 @@ class PersonsUploadView(View):
         try:
             models.Person.objects.all().delete()
         except:
-            print('no data')
+            pass
 
         try:
             msg = models.Person.objects.bulk_create(objs)

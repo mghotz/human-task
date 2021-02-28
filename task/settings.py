@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'task.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db6.sqlite3',
+        'NAME': BASE_DIR / 'db7.sqlite3',
     }
 }
 
