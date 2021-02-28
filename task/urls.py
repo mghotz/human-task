@@ -19,7 +19,7 @@ from generate_data import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('generate/', views.returnCSV),
+    path('generate/<int:record>', views.returnCSV),
     path('', include('visualization.urls')),
     path('api/', include('api_data.urls'))
 ]

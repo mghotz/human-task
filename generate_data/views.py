@@ -50,9 +50,9 @@ def datagenerate(records, headers, response):
 
     return response
 
-def returnCSV(request):
+def returnCSV(request, record):
     # generate object count
-    records = 1000
+    records = record
 
     # data header
     headers = ["Email Id", "First name", "Last name", "Position", "Department", "Age", "Birth Date", "Salary",
